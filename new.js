@@ -1434,19 +1434,7 @@ function hasRole(mem, role) {
  
  
  
- 
- 
- 
-client.on('message', message => {
-     if (message.content === "-ping") {
-      const embed = new Discord.RichEmbed()
- 
-  .setColor("#FF0000")
-  .addField('Bot Ping is' , `${Date.now() - message.createdTimestamp}` + ' ms`')
- 
-  message.channel.sendEmbed(embed);
-    }
-});
+
  
  
  
