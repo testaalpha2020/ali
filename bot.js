@@ -740,7 +740,7 @@ client.on('ready', () => {
  
  
  
-client.on('message', function(message) {
+client.on('message', (message) {
                   if(!message.channel.guild) return;
     if(message.content ===  '-cr-color') {
         if(message.member.hasPermission('MANAGE_ROLES')) {
