@@ -21,7 +21,7 @@ const client = new Discord.Client();
 
  
  client.on('message', message => {
-    if (message.content.startsWith("*link")) {
+    if (message.content.startsWith("^link")) {
  
         message.channel.createInvite({
         thing: true,
@@ -48,7 +48,7 @@ const client = new Discord.Client();
 
 
 client.on('message', message => {
-     if (message.content === "*ping") {
+     if (message.content === "^ping") {
       const embed = new Discord.RichEmbed()
  
   .setColor("#FF0000")
@@ -66,7 +66,7 @@ client.on('message', message => {
 
 
  
-var prefix = "*";
+var prefix = "^";
  
 client.on('message', message => {
   if (message.author.bot) return;
@@ -102,7 +102,7 @@ if (command == "embed") {
 
  
 client.on('message', function(msg) {
-         var prefix = "*"
+         var prefix = "^"
     if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
@@ -122,7 +122,7 @@ client.on('message', function(msg) {
  
 
         client.on('message', message => {
-    if(message.content == '*server') {
+    if(message.content == '^server') {
     const embed = new Discord.RichEmbed()
     .setDescription(`
 **   📗  online:  **__${message.guild.members.filter(m=>m.presence.status == 'online').size}__
@@ -148,7 +148,7 @@ client.on('message', function(msg) {
 
 
 client.on("message", msg => {
-           var prefix = "-";
+           var prefix = "^";
   if(msg.content.startsWith (prefix + "id")) {
     if(!msg.channel.guild) return msg.reply('**:x: This command for servers **');        
       const embed = new Discord.RichEmbed();
@@ -168,6 +168,54 @@ client.on("message", msg => {
 });
  
  
+
+
+
+
+
+
+client.on('message', message => {
+  if(message.content.startsWith ('^help')) {
+      if(!message.channel.guild) return;
+    let embed = new Discord.RichEmbed()
+    .setColor('#044812')
+          .setThumbnail(message.author.avatarURL)
+      .setFooter(message.author.username, message.author.avatarURL)
+ 
+    .setDescription(`**[ تــــــــم الارســــال بالخـــــــاص ]** `)
+        message.channel.send()
+ 
+message.channel.sendEmbed(embed)
+}
+});
+
+
+
+
+
+
+
+client.on('message', message => {
+     if (message.content === "^help") {
+message.author.send(`
+اوامر العام
+^say - يكرر الكلام
+^id معلوماتك
+^ping سرعة بوت
+^link رابط سيرفر في خاص
+`);
+    }
+});
+
+
+
+
+
+
+
+
+
+
 
 
 
