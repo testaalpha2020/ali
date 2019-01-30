@@ -40,6 +40,6 @@
     "winston": "^3.0.0",
     "youtube-info": "^1.2.0",
     "ytdl-core": "^0.21.1",
-    "moment": "^1.2.4",
+    "zalgolize": "^1.2.4",
   }
 }
