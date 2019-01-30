@@ -764,7 +764,7 @@ client.on('message', message=>{
             color: 'RANDOM'})
             }
             }
-    }
+    });
  
  
  
