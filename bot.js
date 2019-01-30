@@ -48,7 +48,7 @@ const client = new Discord.Client();
 
 
 client.on('message', message => {
-     if (message.content === "-ping") {
+     if (message.content === "*ping") {
       const embed = new Discord.RichEmbed()
  
   .setColor("#FF0000")
@@ -99,24 +99,7 @@ if (command == "embed") {
 
 
 
-client.on('message', message => {
-      if (message.content.startsWith(prefix + 'cl')) {
-        if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(`ماعندك هذا البرمشن[*MANAGE_MESSAGES*] `).catch(console.error);
-    message.delete()
-    if(!message.channel.guild) return;
-let args = message.content.split(" ").slice(1);
- 
-  const messagecount = parseInt(args.join(' '));
- 
-  message.channel.fetchMessages({
- 
-    limit: messagecount
- 
-}).then(messages => message.channel.bulkDelete(messages));
-};
- 
-});
- 
+
  
 client.on('message', function(msg) {
          var prefix = "-"
@@ -126,7 +109,7 @@ client.on('message', function(msg) {
       .setThumbnail(msg.guild.iconURL)
       .setTitle(`Showing Details Of  **${msg.guild.name}*`)
       .addField(':globe_with_meridians:** Server Type **',`[** __${msg.guild.region}__ **]`,true)
-      .addField(':medal:** Roles**',`[** __${msg.guild.roles.size}__ **]`,true)
+      .addField(':medal:** Roles**',`[** __{msg.guild.roles.size}__ **]`,true)
       .addField(':pencil:**Text Channel**',`[** __${msg.guild.channels.filter(m => m.type === 'text').size}__** ]`,true)
       .addField(':microphone:**Voice Channel **',`[** __${msg.guild.channels.filter(m => m.type === 'voice').size}__ **]`,true)
       .addField(':crown:**owner**',`**${msg.guild.owner}**`,true)
@@ -138,6 +121,26 @@ client.on('message', function(msg) {
  
  
 
+        client.on('message', message => {
+    if(message.content == '-server') {
+    const embed = new Discord.RichEmbed()
+    .setDescription(`
+**   📗  online:  **__${message.guild.members.filter(m=>m.presence.status == 'online').size}__
+ 
+**   📕  dnd:      **__${message.guild.members.filter(m=>m.presence.status == 'dnd').size}__
+ 
+**   📙  idle:     **__${message.guild.members.filter(m=>m.presence.status == 'idle').size} __  
+ 
+**   📓   offline:  **__${message.guild.members.filter(m=>m.presence.status == 'offline').size}__
+ 
+**   🔖   all: **__${message.guild.memberCount}__`)      
+ 
+         message.channel.send({embed});
+ 
+    }
+  });
+    
+ 
 
 
 
