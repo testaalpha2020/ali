@@ -275,7 +275,7 @@ member.send( `${member} ! ` + "**" + message.guild.name + " : ** " + message.con
                                                             message.delete();
 });
 });
-Client.on("message", message => {
+client.on("message", message => {
     var prefix = "-";
  
             var args = message.content.substring(prefix.length).split(" ");
