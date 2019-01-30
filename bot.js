@@ -220,11 +220,12 @@ message.author.send(`
 ^id معلوماتك
 ^ping سرعة بوت
 ^link رابط سيرفر في خاص
-^much فتح شات 
-^unmuch تقفيل شات
-^mention يفتح منشن @everyone
-^nomention يقفل منشن @everyone
 ^bc برودكاست
+
+
+
+
+
 
 **سيتم اضافة موقع بدل هاذا هيلب ف ترقبو البوت في بداية**`);
     }
