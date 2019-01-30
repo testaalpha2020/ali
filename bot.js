@@ -102,7 +102,7 @@ if (command == "embed") {
 
  
 client.on('message', function(msg) {
-         var prefix = "-"
+         var prefix = "*"
     if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
@@ -122,7 +122,7 @@ client.on('message', function(msg) {
  
 
         client.on('message', message => {
-    if(message.content == '-server') {
+    if(message.content == '*server') {
     const embed = new Discord.RichEmbed()
     .setDescription(`
 **   📗  online:  **__${message.guild.members.filter(m=>m.presence.status == 'online').size}__
@@ -147,26 +147,7 @@ client.on('message', function(msg) {
 
 
 
-client.on("message", msg => {
-           var prefix = "*";
-  if(msg.content.startsWith (prefix + "id")) {
-    if(!msg.channel.guild) return msg.reply('**:x: This command for servers **');        
-      const embed = new Discord.RichEmbed();
-  embed.addField(":cloud_tornado:  name", `__**[ ${msg.author.username}#${msg.author.discriminator} ]**__`, true)
-          .addField(":id:  id", `__**[ ${msg.author.id} ]**__`, true)
-          .setColor("RANDOM")
-          .setFooter(msg.author.username , msg.author.avatarURL)
-          .setThumbnail(`${msg.author.avatarURL}`)
-          .setTimestamp()
-          .setURL(`${msg.author.avatarURL}`)
-          .addField(':spy:  status', `__**[ ${msg.author.presence.status.toUpperCase()} ]**__`, true)
-          .addField(':satellite_orbital:   playing', `__**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**__`, true)
-          .addField(':military_medal:  role', `__**[ ${msg.member.roles.filter(r => r.name).size} ]**__`, true)
-          .addField(':robot:  bot?  ', `__**[ ${msg.author.bot.toString().toUpperCase()} ]**__`, true);
-      msg.channel.send({embed: embed})
-  }
-});
- 
+
 
 
 
