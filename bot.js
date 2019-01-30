@@ -71,7 +71,7 @@ const client = new Discord.Client();
 
 
 client.on('message', message => {
-     if (message.content === "-ping") {
+     if (message.content === "*ping") {
       const embed = new Discord.RichEmbed()
  
   .setColor("#FF0000")
