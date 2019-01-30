@@ -11,6 +11,16 @@ const client = new Discord.Client();
  
  
  
+ client.on('ready', () => {
+   console.log(`~~~~~~~~~~~~~~~~~`);
+   console.log(`Logging into Discord`);
+   console.log(`~~~~~~~~~~~~~~~~~~~~~`);
+   console.log(`on  ${client.guilds.size} Servers `);
+   console.log(`~~~~~~~~~~~~~~~~~~~~~~~~`);
+   console.log(`Logged in as ${client.user.tag}!`);
+   client.user.setGame(`-help | -inv`,"http://twitch.tv/y04zgamer")
+   client.user.setStatus("dnd")
+});
  
 
 
@@ -210,21 +220,138 @@ message.author.send(`
 
 
 
+client.on('message', message => {
+var prefix = "^";
+ 
+    if (message.author.id === client.user.id) return;
+    if (message.guild) {
+   let embed = new Discord.RichEmbed()
+    let args = message.content.split(' ').slice(1).join(' ');
+if(message.content.split(' ')[0] == prefix + 'bc') {
+    if (!args[1]) {
+message.channel.send("```**-bc <message>**```");
+return;
+}
+        message.guild.members.forEach(m => {
+   if(!message.member.hasPermission('ADMINISTRATOR')) return;
+            var bc = new Discord.RichEmbed()
+            .addField('✍ المرسل : ', `${message.author.username}#${message.author.discriminator}`)
+                        .addField('---------------------------')
+            .addField('📩 الرسالة : ', args)
+                                    .addField('---------------------------')
+                        .addField('✨ السيرفر :', `${message.guild.name}`)
+            .setColor('RANDOM')
+            // m.send(`[${m}]`);
+            m.send(`${m}`,{embed: bc});
+        });
+    }
+    } else {
+        return;
+    }
+});
+ 
+ 
+
+
+
+Client.on('message', message => {
+if (message.content.split(' ')[0] == '^bc')
+ message.guild.members.forEach( member => {
+         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+member.send( `${member} ! ` + "**" + message.guild.name + " : ** " + message.content.substr(3));
+                                                            message.delete();
+});
+});
+Client.on("message", message => {
+    var prefix = "-";
+ 
+            var args = message.content.substring(prefix.length).split(" ");
+            if (message.content.startsWith(prefix - "bc")) {
+                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+ if (!args[1]) {
+                                let embed3 = new Discord.RichEmbed()
+                                .setDescription(":white_check_mark: | تم ارسال للكل رساله فارغه")
+                                .setColor("#FF0000")
+                                message.channel.sendEmbed(embed3);
+                            } else {
+ 
+                            let embed4 = new Discord.RichEmbed()
+                                                            .setDescription(':white_check_mark: | تم ارسال للكل الرساله !')
+                                                            .setColor("#008000")
+                                message.channel.sendEmbed(embed4);
+                                                      message.delete();
+                            }
+                          }
+});
+ 
+ 
 
 
 
 
+client.on('message', message => {
+ 
+       if(message.content === prefix + "^much") {
+                           if(!message.channel.guild) return message.reply('** This command only for servers**');
+ 
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **No🌚**');
+              message.channel.overwritePermissions(message.guild.id, {
+            SEND_MESSAGES: false
+ 
+              }).then(() => {
+              message.channel.send('__**Done 🔒**__')            
+              });
+                }
+//فتح الشات
+    if(message.content === prefix + "unmuch") {
+                        if(!message.channel.guild) return message.reply('** This command only for servers**');
+ 
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**No🌚**');
+              message.channel.overwritePermissions(message.guild.id, {
+            SEND_MESSAGES: true
+ 
+              }).then(() => {
+              message.channel.send('__**Done 🔓**__')        
+              });
+                }
+               
+         
+       
+});
+ 
 
 
 
 
-
-
-
-
-
-
-
+client.on('message', message => {
+ 
+       if(message.content === prefix + "^nomention") {
+                           if(!message.channel.guild) return message.reply('** This command only for servers**');
+ 
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **No🌚**');
+              message.channel.overwritePermissions(message.guild.id, {
+            MENTION_EVERYONE: false
+ 
+              }).then(() => {
+              message.channel.send('__**Done 🔒**__')            
+              });
+                }
+//فتح الشات
+    if(message.content === prefix + "mention") {
+                        if(!message.channel.guild) return message.reply('** This command only for servers**');
+ 
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**No🌚**');
+              message.channel.overwritePermissions(message.guild.id, {
+            MENTION_EVERYONE: true
+ 
+              }).then(() => {
+              message.channel.send('__**Done 🔓**__')
+              });
+                }
+               
+         
+       
+});
 
 
 
