@@ -109,14 +109,7 @@ client.on('message', message => {
 
 
 
-client.on('guildMemberAdd', r => {
-if(!nicknameforjoin) return;
-if(r.user.bot) return;
-if(!name[r.id]){ name[r.id] = {name: r.nickname}};
-name[r.id].name = r.nickname
-r.setNickname(`${nicknameforjoin}`)
-});
- 
+
  
  
  
