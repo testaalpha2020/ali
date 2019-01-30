@@ -53,7 +53,7 @@ client.on("message", message => {
     });
   }
  
-});
+};
  
  
  
