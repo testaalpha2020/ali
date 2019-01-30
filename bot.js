@@ -35,11 +35,7 @@ const client = new Discord.Client();
     message.guild.member(user).removeRole(muteRole).then(() => {
       client.channels.get(modlog2.id).send({embed});
     });
-  }
- 
-};
- 
-};
+
  
 
 
