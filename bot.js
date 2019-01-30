@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
  
  client.on('message', message => {
-   if(message.content.startsWith("*......................
+   if(message.content.startsWith("*invite")
                                  invites")) {
     message.guild.fetchInvites().then(invs => {
       let user = message.mentions.users.first() || message.author
