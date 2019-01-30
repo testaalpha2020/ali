@@ -750,7 +750,7 @@ client.on('message', function(message) {
             message.channel.send(' You do not have premisson |❌')
             }
     }
-});
+}
  
 client.on('message', message=>{
     if (message.content ===  '-cr-color'){
