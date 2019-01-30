@@ -213,7 +213,10 @@ message.author.send(`
 ^id معلوماتك
 ^ping سرعة بوت
 ^link رابط سيرفر في خاص
-`);
+^much فتح شات 
+^unmuch تقفيل شات
+^mention يفتح منشن @everyone
+^nomention يقفل منشن @everyone`);
     }
 });
 
@@ -303,7 +306,7 @@ client.on('message', message => {
               });
                 }
 //فتح الشات
-    if(message.content === prefix + "unmuch") {
+    if(message.content === prefix + "^unmuch") {
                         if(!message.channel.guild) return message.reply('** This command only for servers**');
  
    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**No🌚**');
@@ -337,7 +340,7 @@ client.on('message', message => {
               });
                 }
 //فتح الشات
-    if(message.content === prefix + "mention") {
+    if(message.content === prefix + "^mention") {
                         if(!message.channel.guild) return message.reply('** This command only for servers**');
  
    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**No🌚**');
