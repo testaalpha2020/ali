@@ -202,7 +202,16 @@ message.channel.sendEmbed(embed)
 
 
 
-
+client.on('ready', () => {
+   console.log(`~~~~~~~~~~~~~~~~~`);
+   console.log(`Logging into Discord`);
+   console.log(`~~~~~~~~~~~~~~~~~~~~~`);
+   console.log(`on  ${client.guilds.size} Servers `);
+   console.log(`~~~~~~~~~~~~~~~~~~~~~~~~`);
+   console.log(`Logged in as ${client.user.tag}!`);
+   client.user.setGame(`^help")
+   client.user.setStatus("dnd")
+});
 
 
 client.on('message', message => {
@@ -216,7 +225,10 @@ message.author.send(`
 ^much فتح شات 
 ^unmuch تقفيل شات
 ^mention يفتح منشن @everyone
-^nomention يقفل منشن @everyone`);
+^nomention يقفل منشن @everyone
+^bc برودكاست
+
+**سيتم اضافة موقع بدل هاذا هيلب ف ترقبو البوت في بداية**`);
     }
 });
 
