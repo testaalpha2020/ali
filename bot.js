@@ -654,7 +654,7 @@ message.author.send(`
 
 client.on('message', message => {
      if (message.content === ".") {
-message.send(`هلا`)
+message.reply(`هلا`)
       }
  });
 
