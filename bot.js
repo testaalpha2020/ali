@@ -652,6 +652,117 @@ message.author.send(`
 
 
 
+client.on('message', message => {
+     if (message.content === ".") {
+message.send(`هلا`)
+      }
+ });
+
+
+client.on('message', message => {
+     if (message.content === "..") {
+message.send(`وش تبي`)
+      }
+ });
+
+
+
+client.on('message', message => {
+     if (message.content === "...") {
+message.send(`قل وش تبي`)
+      }
+ });
+
+
+
+
+client.on('message', message => {
+     if (message.content === "....") {
+message.send(`قل وإلا اقع وجهك`)
+      }
+ });
+
+
+
+
+client.on('message', message => {
+     if (message.content === ".....") {
+message.send(`شكلك تبي مشاكل`)
+      }
+ });
+
+
+
+
+client.on('message', message => {
+     if (message.content === "......") {
+message.send(`يا كريه يكفي تنقط`)
+      }
+ });
+
+
+
+
+
+
+
+client.on('message', message => {
+     if (message.content === ".......") {
+message.send(`يا حبيبي اعمل الي تبيه يكفي تنقط`)
+      }
+ });
+
+
+
+
+client.on('message', message => {
+     if (message.content === "........") {
+message.send(`خلاص ما برد`)
+      }
+ });
+
+
+
+
+client.on('message', message => {
+     if (message.content === ".........") {
+message.send(`يككككككفي تنقط `)
+      }
+ });
+
+
+
+
+
+client.on('message', message => {
+     if (message.content === "..........") {
+message.send(`يرحم امك ابوك اخوك احتك خلااااااااااص`)
+      }
+ });
+
+
+
+client.on('message', message => {
+     if (message.content === "...........") {
+message.send(`coming-soon`)
+      }
+ });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 client.on('message', message => {
 var prefix = "^";
