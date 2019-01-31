@@ -613,9 +613,9 @@ message.author.send(`
 ^unmuch تقفيل شات
 ^much فتح شات
 ^image صورة سيرفر
-^mute اعضاء العضو ميوت
+^mute اعطاء العضو ميوت
 ^unmute الغاء الميوت من العضو
-
+^giveawayيسوي قيف اواي
 
 
 
