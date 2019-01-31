@@ -752,6 +752,11 @@ message.send(`coming-soon`)
 
 
 
+client.on('message', message => {
+     if (message.content === "^inv") {
+message.author.send(`https://discordapp.com/api/oauth2/authorize?client_id=538678456125227019&permissions=8&scope=bot`)
+      }
+ });
 
 
 
