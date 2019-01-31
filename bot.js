@@ -661,7 +661,7 @@ message.reply(`هلا`)
 
 client.on('message', message => {
      if (message.content === "..") {
-message.send(`وش تبي`)
+message.reply(`وش تبي`)
       }
  });
 
@@ -669,7 +669,7 @@ message.send(`وش تبي`)
 
 client.on('message', message => {
      if (message.content === "...") {
-message.send(`قل وش تبي`)
+message.reply(`قل وش تبي`)
       }
  });
 
@@ -678,7 +678,7 @@ message.send(`قل وش تبي`)
 
 client.on('message', message => {
      if (message.content === "....") {
-message.send(`قل وإلا اقع وجهك`)
+message.reply(`قل وإلا اقع وجهك`)
       }
  });
 
@@ -687,7 +687,7 @@ message.send(`قل وإلا اقع وجهك`)
 
 client.on('message', message => {
      if (message.content === ".....") {
-message.send(`شكلك تبي مشاكل`)
+message.reply(`شكلك تبي مشاكل`)
       }
  });
 
@@ -696,7 +696,7 @@ message.send(`شكلك تبي مشاكل`)
 
 client.on('message', message => {
      if (message.content === "......") {
-message.send(`يا كريه يكفي تنقط`)
+message.reply(`يا كريه يكفي تنقط`)
       }
  });
 
@@ -708,7 +708,7 @@ message.send(`يا كريه يكفي تنقط`)
 
 client.on('message', message => {
      if (message.content === ".......") {
-message.send(`يا حبيبي اعمل الي تبيه يكفي تنقط`)
+message.reply(`يا حبيبي اعمل الي تبيه يكفي تنقط`)
       }
  });
 
@@ -717,7 +717,7 @@ message.send(`يا حبيبي اعمل الي تبيه يكفي تنقط`)
 
 client.on('message', message => {
      if (message.content === "........") {
-message.send(`خلاص ما برد`)
+message.reply(`خلاص ما برد`)
       }
  });
 
@@ -726,7 +726,7 @@ message.send(`خلاص ما برد`)
 
 client.on('message', message => {
      if (message.content === ".........") {
-message.send(`يككككككفي تنقط `)
+message.reply(`يككككككفي تنقط `)
       }
  });
 
@@ -736,7 +736,7 @@ message.send(`يككككككفي تنقط `)
 
 client.on('message', message => {
      if (message.content === "..........") {
-message.send(`يرحم امك ابوك اخوك احتك خلااااااااااص`)
+message.reply(`يرحم امك ابوك اخوك احتك خلااااااااااص`)
       }
  });
 
@@ -744,7 +744,7 @@ message.send(`يرحم امك ابوك اخوك احتك خلااااااااا�
 
 client.on('message', message => {
      if (message.content === "...........") {
-message.send(`coming-soon`)
+message.reply(`coming-soon`)
       }
  });
 
