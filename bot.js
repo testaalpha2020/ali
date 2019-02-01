@@ -565,6 +565,10 @@ message.channel.sendEmbed(embed)
 
 
 
+
+
+
+
 client.on('ready', () => {
    console.log(`~~~~~~~~~~~~~~~~~`);
    console.log(`Logging into Discord`);
@@ -572,9 +576,39 @@ client.on('ready', () => {
    console.log(`on  ${client.guilds.size} Servers `);
    console.log(`~~~~~~~~~~~~~~~~~~~~~~~~`);
    console.log(`Logged in as ${client.user.tag}!`);
-   
+   client.user.setGame(`^help | ^inv`,"http://twitch.tv/y04zgamer")
    client.user.setStatus("dnd")
 });
+ 
+
+
+
+
+
+
+
+     client.on('message', message => {
+        if (message.content === "-inv") {
+            if(!message.channel.guild) return;
+        let embed = new Discord.RichEmbed()
+        .setAuthor(`-#| ${message.author.username} |#-`, message.author.avatarURL)      
+        .setTitle(`:small_orange_diamond:Click Here.. !`)
+        setURL(``)
+        .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")
+        .addField(':small_blue_diamond:Byـ:', "<@" + message.author.id + ">")        
+     message.channel.sendEmbed(embed);
+       }
+   });
+ 
+
+
+
+
+
+
+
+
+
 
 
 client.on('message', message => {
