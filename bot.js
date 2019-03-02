@@ -794,6 +794,64 @@ message.author.send(`https://discordapp.com/api/oauth2/authorize?client_id=53867
 
 
 
+client.on('message', message => {
+     if (message.content === "كيفك") {
+message.reply(`الحمدلله وانت`)
+      }
+ });
+
+
+
+client.on('message', message => {
+     if (message.content === "والله الحمدلله") {
+message.reply(`دايما`)
+      }
+ });
+
+
+
+client.on('message', message => {
+     if (message.content === "الحمدلله") {
+message.reply(`دايما`)
+      }
+ });
+
+
+client.on('message', message => {
+     if (message.content === "انا احبك") {
+message.reply(`وانا ايضا`)
+      }
+ });
+
+
+
+client.on('message', message => {
+     if (message.content === "هل تحبني") {
+message.reply(`لا اظن`)
+      }
+ });
+
+
+client.on('message', message => {
+     if (message.content === "") {
+message.reply(``)
+      }
+ });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
